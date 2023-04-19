@@ -13,4 +13,12 @@ public class BufferedReaderEx {
         System.out.println("line2 = "+ br.readLine());
 
     }
+
+    public void plusTwoNumbers() throws IOException {
+        InputStreamReader is = new InputStreamReader(System.in);
+        BufferedReader bf = new BufferedReader(is);
+
+        System.out.println(bf.readLine()+ bf.readLine());
+
+    }
 }
