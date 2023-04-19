@@ -2,11 +2,9 @@ package com.example.javaproject2.week1;
 
 import java.io.IOException;
 
-public class JavaInputTest {
+public class BufferedReaderTest {
     public static void main(String[] args) throws IOException {
-        JavaInput j = new JavaInput();
-        j.readTowChars();
-
-
+        BufferedReaderEx bf = new BufferedReaderEx();
+        bf.readALine();
     }
 }
