@@ -3,18 +3,20 @@ package com.example.javaproject2.week2;
 import java.util.Arrays;
 
 public class FillArray {
-    public static void rowFill(int[][] arr){
-
+    public static void rowFill(int[][] arr, int row){
+        for(int i = 0 ; i < arr[row].length ; i++){
+            arr[row][i] = 1;
+        }
     }
+
+
+
+
     public static void main(String[] args) {
         int[][] arrRow = new int[5][5];
         int[][] arrCmn = new int[5][5];
 
-        arrRow[2][0]= 1;
-        arrRow[2][1]= 1;
-        arrRow[2][2]= 1;
-        arrRow[2][3]= 1;
-        arrRow[2][4]= 1;
+        rowFill(arrRow,2);
 
         for(int i = 0 ; i < 5 ; i++){
             System.out.println(Arrays.toString(arrRow[i]));
