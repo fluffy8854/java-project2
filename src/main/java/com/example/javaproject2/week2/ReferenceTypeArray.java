@@ -13,8 +13,4 @@ public class ReferenceTypeArray {
     }
 }
 
-class Student{
-    String name;
-    String phoneNumber;
-    int age;
-}
+
