@@ -13,6 +13,6 @@ public class LikeAccumulate {
         likeCount = likeCount - 1;
         System.out.println(likeCount);
 
-
+        
     }
 }
