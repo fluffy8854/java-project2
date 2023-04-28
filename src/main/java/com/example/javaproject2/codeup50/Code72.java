@@ -7,14 +7,14 @@ public class Code72 {
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
-        printInt(sc,n);
+        printInt(sc,n-1);
     }
 
     public static int printInt (Scanner sc, int n){
         int num;
         num = sc.nextInt();
+        System.out.printf("%d\n",num);
         if( n == 0) return 0;
-        System.out.printf(" %d : %d\n",n,num);
         return printInt(sc, n-1);
     }
 }
