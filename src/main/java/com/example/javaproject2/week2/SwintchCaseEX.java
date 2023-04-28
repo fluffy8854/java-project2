@@ -19,7 +19,7 @@ public class SwintchCaseEX {
                 System.out.println("토요일");
             case 7:
                 System.out.println("일요일");
-            default: break;
+            default:
 
         }
 
