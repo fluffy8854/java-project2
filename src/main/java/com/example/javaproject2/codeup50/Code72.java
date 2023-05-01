@@ -15,6 +15,7 @@ public class Code72 {
         num = sc.nextInt();
         System.out.printf("%d\n",num);
         if( n == 0) return 0;
+        // 재귀 함수 이용
         return printInt(sc, n-1);
     }
 }
