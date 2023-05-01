@@ -10,6 +10,8 @@ public class ForRevers {
 
         for(int i = 10 ; i > 0 ; i--){
             //System.out.println(i);
+            int[] a= new int[5];
+
             System.out.printf("%d ",i);
         }
     }
