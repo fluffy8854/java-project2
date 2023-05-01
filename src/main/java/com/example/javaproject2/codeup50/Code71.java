@@ -15,6 +15,7 @@ public class Code71 {
         num = sc.nextInt();
         if( num == 0) return 0;
         System.out.printf("%d\n",num);
+        // 재귀로 반복
         return printInt(sc);
     }
 }
