@@ -9,7 +9,7 @@ public class Code71 {
         do{
             num = sc.nextInt();
 
-            System.out.printf("%d\n",num);
+            if(num != 0)System.out.printf("%d\n",num);
         }while( num != 0);
         //printInt(sc);
 

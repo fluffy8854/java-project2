@@ -8,8 +8,7 @@ public class Code73 {
         int num ;
         do{
             num = sc.nextInt();
-            System.out.println(num);
-            num = sc.nextInt();
+            if(num != 0) System.out.println(num);
         }while(num != 0);
     }
 }
