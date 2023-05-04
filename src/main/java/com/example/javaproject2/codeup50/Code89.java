@@ -9,6 +9,10 @@ public class Code89 {
         int d = sc.nextInt();
         int n = sc.nextInt();
 
-        System.out.println(a+(n-1)*d);
+        for (int i = 1; i < n  ; i++) {
+            a = a + d;
+        }
+        System.out.println(a);
+        //System.out.println(a+(n-1)*d);
     }
 }

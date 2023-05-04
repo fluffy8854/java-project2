@@ -9,7 +9,11 @@ public class Code90 {
         long r = sc.nextInt();
         long n = sc.nextInt();
 
-        System.out.println(a*(long)Math.pow(r,n-1));
+        for (int i = 1; i < n  ; i++) {
+            a = a * r;
+        }
+        System.out.println(a);
+        //System.out.println(a*(long)Math.pow(r,n-1));
 
     }
 }
