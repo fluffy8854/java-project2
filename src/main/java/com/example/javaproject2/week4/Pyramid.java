@@ -3,25 +3,32 @@ package com.example.javaproject2.week4;
 import java.util.Scanner;
 
 public class Pyramid {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int num = sc.nextInt();
+    public String spacechar = "0";
+    public Pyramid(String sc){
+        this.spacechar = sc;
+    }
 
-        for (int i = 0; i < num ; i++) {
+    public void printPyramid(int height){
 
-            for (int j = num  - i; j > 0 ; j--) {
-                System.out.print(" ");
+        for (int i = 0; i < height ; i++) {
+
+            for (int j = height - i; j > 0 ; j--) {
+                System.out.print(spacechar);
             }
 
             for (int j = 0; j < 2*i +1 ; j++) {
                 System.out.print("*");
             }
 
-            for (int j = num  - i; j > 0 ; j--) {
-                System.out.print(" ");
-            }
             System.out.println("");
 
         }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        Pyramid p = new Pyramid(" ");
+        p.printPyramid(num);
     }
 }
