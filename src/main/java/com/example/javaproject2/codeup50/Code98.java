@@ -3,13 +3,15 @@ package com.example.javaproject2.codeup50;
 import java.util.Scanner;
 
 public class Code98 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int h = sc.nextInt(); // 세로
-        int w = sc.nextInt(); // 가로
-        int [][] arr = new int[h][w];
+    private int h = 0;
+    private int w = 0;
+    public Code98(int h, int w){
+        this.h = h;
+        this.w = w;
+    }
 
-        int n = sc.nextInt(); // 횟수
+    public void printCode98(int n, Scanner sc){
+        int[][] arr = new int[this.h][this.w];
 
         int l,d,x,y;
 
@@ -39,6 +41,12 @@ public class Code98 {
             System.out.print("\n");
         }
 
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Code98 cd = new Code98(sc.nextInt(),sc.nextInt()); //높이 , 가로
+
+        cd.printCode98(sc.nextInt(),sc);
 
     }
 }
