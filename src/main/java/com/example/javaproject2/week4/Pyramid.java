@@ -25,10 +25,24 @@ public class Pyramid {
         }
     }
 
+    public String makeALine(String spacechar, int height, int i){
+        String aLine = "";
+        for (int j = 0; j < height - i; j++) {
+            aLine += spacechar;
+        }
+
+        for (int j = 0; j < 2*i -1 ; j++) {
+            aLine += "*";
+        }
+
+        return aLine;
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
         Pyramid p = new Pyramid(" ");
         p.printPyramid(num);
+        System.out.println(p.makeALine(" ", 6,6));
     }
 }
