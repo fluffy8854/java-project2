@@ -19,5 +19,7 @@ public class HelloPrinter {
     public static void main(String[] args) throws IOException {
         HelloPrinter hp = new HelloPrinter(new ConsolePrinter2());
         hp.repeatMessage(5,"Hello");
+        HelloPrinter hp2 = new HelloPrinter(new FilePrinter2());
+        hp2.repeatMessage(5,"Hello");
     }
 }
