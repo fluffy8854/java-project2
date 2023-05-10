@@ -1,6 +1,13 @@
 package com.example.javaproject2.week4;
 
-public class ParallelogramDrawer extends ShapeDrawer {
+public class ParallelogramDrawer implements ShapeDrawer {
+
+    @Override
+    public void printShape(int h) {
+        for (int i = 0; i < h ; i++) {
+            System.out.println(makeALine(h,i));
+        }
+    }
 
     @Override
     public String makeALine(int h, int i) {
