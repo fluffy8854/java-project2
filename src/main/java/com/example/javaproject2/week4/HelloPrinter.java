@@ -1,6 +1,8 @@
 package com.example.javaproject2.week4;
 
 public class HelloPrinter {
+    Printer2 printer;
+
 
     public void print(String message){
         System.out.println(message);
