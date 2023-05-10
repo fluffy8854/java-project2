@@ -1,6 +1,6 @@
 package com.example.javaproject2.week4;
 
-public class DiamondShapeDrawer extends ShapeDrawer{
+public class DiamondShapeDrawer extends ShapeDrawer2{
 
     @Override
     public String makeALine(int h, int i){
@@ -15,6 +15,11 @@ public class DiamondShapeDrawer extends ShapeDrawer{
         }
 
         return str;
+    }
+
+    public static void main(String[] args) {
+        ShapeDrawer2 dsd = new DiamondShapeDrawer();
+        dsd.printShape(7);
     }
 
 }
