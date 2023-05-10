@@ -13,9 +13,9 @@ public class RightTrianglePrinter {
 
 
     public static void main(String[] args) throws IOException {
-        Printer p1 = new ConsolePrinter();
-        p1.print();
-        Printer p2 = new FilePrinter();
-        p2.print();
+        RightTrianglePrinter p1 = new RightTrianglePrinter(new ConsolePrinter());
+        p1.printer.print();
+        RightTrianglePrinter p2 = new RightTrianglePrinter(new FilePrinter());
+        p2.printer.print();
     }
 }
