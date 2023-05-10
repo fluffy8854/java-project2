@@ -4,39 +4,36 @@ import java.util.Scanner;
 
 public class Diamond {
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int num = sc.nextInt();
+    public void printDiamond(int h) {
+        for (int i = 0; i < h; i++) {
 
-        for (int i = 0; i < num; i++) {
-
-
-            if (i <= num / 2 -1) {
-                for (int j = (num-1)/2  - i   ; j > 0 ; j--) {
+            if (i <= h / 2 - 1) {
+                for (int j = (h - 1) / 2 - i; j > 0; j--) {
                     System.out.print(" ");
                 }
                 for (int j = 0; j < 2 * i + 1; j++) {
                     System.out.print("*");
                 }
-                for (int j =num  - 2*i -1 ; j > 0 ; j--) {
-                    System.out.print(" ");
-                }
-            } else if (i > num / 2 -1) {
-                for (int j = 0; j < i - num/2 ; j++) {
+            } else if (i > h / 2 - 1) {
+                for (int j = 0; j < i - h / 2; j++) {
                     System.out.print(" ");
                 }
 
-                for (int j = 2*num - 2*i -1 ; j > 0; j--) {
+                for (int j = 2 * h - 2 * i - 1; j > 0; j--) {
                     System.out.print("*");
                 }
-
-                for (int j = 0; j < i - num/2 ; j++) {
-                    System.out.print(" ");
-                }
             }
-
-            System.out.println("");
+            System.out.println(" ");
         }
+
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Diamond dm = new Diamond();
+        dm.printDiamond(sc.nextInt());
+
+
 
     }
 }
