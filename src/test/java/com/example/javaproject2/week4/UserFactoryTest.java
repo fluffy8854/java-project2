@@ -6,7 +6,7 @@ class UserFactoryTest {
     public static void main(String[] args) {
         UserFactory uf =new UserFactory();
         User user1= uf.getAdultUser();
-        System.out.println(user1.age);
+        System.out.println(user1.getAge());
     }
 
 }
