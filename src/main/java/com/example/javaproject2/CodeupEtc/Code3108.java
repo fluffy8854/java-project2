@@ -53,6 +53,16 @@ class AttendeesList implements Comparable<AttendeesList>{
         else return 0;
     }
 
+    public boolean isDuplicate(int code, List<AttendeesList> al){
+        boolean dupCode = false;
+        for (int j = 0; j < al.size() ; j++) {
+            if(al.get(j).getCode() == code){
+                dupCode = true;
+            }
+        }
+        return dupCode;
+    }
+
     public List<AttendeesList> addAStudent(Scanner sc, List<AttendeesList> al){
         int n = sc.nextInt();
         boolean dupCode = false;
@@ -61,20 +71,12 @@ class AttendeesList implements Comparable<AttendeesList>{
 
         // 입력 처리
         for (int i = 0; i < n ; i++) {
-            c = sc.next();
-            code = sc.nextInt();
-            name = sc.next();
+            c = sc.next(); code = sc.nextInt(); name = sc.next();
+
             if(c.equals("I")){
-                for (int j = 0; j < al.size() ; j++) {
-                    if(al.get(j).getCode() == code){
-                        dupCode = true;
-                    }
+                if(!isDuplicate(code,al)){
+                    al.add(new AttendeesList(c, code, name));
                 }
-                if(dupCode){
-                    dupCode = false;
-                    continue;
-                }
-                al.add(new AttendeesList(c, code, name));
             }
             else if(c.equals("D")){
                 for (int j = 0; j < al.size() ; j++) {
