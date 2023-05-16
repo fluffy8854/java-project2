@@ -3,10 +3,21 @@ package com.example.javaproject2.week5.d2;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class InsertSort implements Comparator<Integer> {
+public class InsertSort {
+    private Comparator<Integer> comparator;
+
+    public InsertSort(Comparator<Integer> cmp){
+        this.comparator = cmp;
+    }
+
     public static void main(String[] args) {
         int[] arr = {7,2,3,9,28,11,1,4,7};
-        InsertSort is = new InsertSort();
+        InsertSort is = new InsertSort(new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return o1-o2;
+            }
+        });
         is.iSort(arr);
 
         System.out.println(Arrays.toString(arr));
@@ -19,15 +30,11 @@ public class InsertSort implements Comparator<Integer> {
         }
     }
     public void iSortARound(int[]arr, int j){
-        if(compare(arr[j-1],arr[j])>0){
+        if(comparator.compare(arr[j-1],arr[j])>0){
             int tmp = arr[j];
             arr[j] = arr[j-1];
             arr[j-1] = tmp;
         }
     }
 
-    @Override
-    public int compare(Integer o1, Integer o2) {
-        return o1-o2;
-    }
 }
