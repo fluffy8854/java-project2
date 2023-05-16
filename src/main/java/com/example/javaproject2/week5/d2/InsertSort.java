@@ -22,17 +22,25 @@ public class InsertSort {
 
         System.out.println(Arrays.toString(arr));
     }
-    public void iSort(int[] arr){
+
+    public int[] iSort(int[] arr){
+        return iSort(arr,false);
+    }
+
+    public int[] iSort(int[] arr,boolean isAsc){
         for (int i = 1; i < arr.length; i++) {
             for (int j = i; j >= 1; j--) {
-                if(comparator.compare(arr[j-1],arr[j])<=0) break;
-                iSortARound(arr,j);
-
+                if(isAsc ? comparator.compare(arr[j-1],arr[j])<=0
+                        :comparator.compare(arr[j-1],arr[j])>= 0
+                ) break;
+                iSortARound(arr,j, isAsc);
             }
         }
+        return arr;
     }
-    public void iSortARound(int[]arr, int j){
-        if(comparator.compare(arr[j-1],arr[j])>0){
+    public void iSortARound(int[]arr, int j,boolean isAsc){
+        if(isAsc ? comparator.compare(arr[j-1],arr[j])>0
+                : comparator.compare(arr[j-1],arr[j])<0 ){
             int tmp = arr[j];
             arr[j] = arr[j-1];
             arr[j-1] = tmp;
