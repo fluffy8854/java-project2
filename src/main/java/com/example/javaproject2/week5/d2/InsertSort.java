@@ -38,6 +38,7 @@ public class InsertSort {
         }
         return arr;
     }
+
     public void iSortARound(int[]arr, int j,boolean isAsc){
         if(isAsc ? comparator.compare(arr[j-1],arr[j])>0
                 : comparator.compare(arr[j-1],arr[j])<0 ){
