@@ -28,11 +28,18 @@ public class Stack1 {
         return this.pointer == 0;
     }
 
+    public int peek(){
+        if(isEmpty()) throw new EmptyStackException();
+        return this.arr[pointer-1];
+    }
+
     public static void main(String[] args) {
         Stack1 st = new Stack1();
         st.push(10);
-        System.out.println(st.pop());
-        System.out.println(st.isEmpty());
+        System.out.println(st.peek());
+        st.push(20);
+        System.out.println(st.peek());
         st.pop();
+        System.out.println(st.peek());
     }
 }
