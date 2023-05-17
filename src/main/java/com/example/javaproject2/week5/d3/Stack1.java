@@ -1,6 +1,7 @@
 package com.example.javaproject2.week5.d3;
 
 import java.util.Arrays;
+import java.util.EmptyStackException;
 
 public class Stack1 {
 
@@ -19,7 +20,7 @@ public class Stack1 {
     }
 
     public int pop(){
-        if(isEmpty()) return -1;
+        if(isEmpty()) throw new EmptyStackException();
         return this.arr[--pointer];
     }
 
@@ -32,6 +33,6 @@ public class Stack1 {
         st.push(10);
         System.out.println(st.pop());
         System.out.println(st.isEmpty());
-
+        st.pop();
     }
 }
