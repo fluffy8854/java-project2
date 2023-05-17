@@ -15,15 +15,18 @@ public class Stack1 {
     }
 
     public void push(int value){
-         this.arr[pointer] = value;
-         pointer++;
-        System.out.println(pointer);
-        System.out.println(Arrays.toString(this.arr));
+         this.arr[pointer++] = value;
+    }
+
+    public int pop(){
+        if(pointer == 0) return -1;
+        return this.arr[--pointer];
     }
 
     public static void main(String[] args) {
         Stack1 st = new Stack1();
         st.push(10);
+        System.out.println(st.pop());
 
     }
 }
