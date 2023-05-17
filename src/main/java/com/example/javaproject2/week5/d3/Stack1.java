@@ -19,14 +19,19 @@ public class Stack1 {
     }
 
     public int pop(){
-        if(pointer == 0) return -1;
+        if(isEmpty()) return -1;
         return this.arr[--pointer];
+    }
+
+    public boolean isEmpty(){
+        return this.pointer == 0;
     }
 
     public static void main(String[] args) {
         Stack1 st = new Stack1();
         st.push(10);
         System.out.println(st.pop());
+        System.out.println(st.isEmpty());
 
     }
 }
